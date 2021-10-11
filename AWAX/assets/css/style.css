@@ -1,0 +1,541 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+
+header {
+    height: 100px;
+    background-color: #000;
+}
+
+.header {
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logoimg {
+    width: 80px;
+    height: 80px;
+    background-color: #b28756;
+    border-radius: 40px;
+}
+
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul,
+.menu li {
+    list-style: none;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid black;
+}
+
+.menu li a:hover {
+    border-bottom: 5px solid #b28756;
+}
+
+.menu li a:hover,
+.menu .active a {
+    border-bottom: 5px solid #b28756;
+    color: #ccc;
+}
+
+
+/* ======================banner======================== */
+.banner {
+    height: calc(100vh - 100px);
+    background-color: #333;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+
+}
+
+.banner .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.banner .slide {
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.banner .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.banner h1 span {
+    color: #b28756;
+}
+
+.banner h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #b28756;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+
+}
+
+.banner .sliders-pointers {
+    width: 100vw;
+    height: 20px;
+    /* background-color: red; */
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.banner .pointer.active {
+    background-color: #b28756;
+}
+
+.default {
+    /* background-color: red; */
+    width: 100vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.default .section-title,
+.default .section-desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.default .section-title {
+    font-size: 20px;
+}
+
+.default .section-desc {
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+}
+
+.default .section-body {
+    max-width: 1140px;
+    margin: auto;
+    
+}
+
+.default.light{
+    background-color: #f7f7f7;
+}
+
+.default.light .section-title,
+.default.light  .section-body{
+  color: black;
+}
+
+
+
+.default.dark{
+    background-color: #000;
+}
+.default.dark .section-title,
+.default.dark .section-body{
+color: #fff;
+}
+
+
+
+
+
+
+/* ====================css de aeras especificas====================== */
+.section-aboutus{
+    display: flex;
+
+}
+
+.section-aboutus--left{
+flex: 1;
+}
+.section-aboutus--right{
+    width: 500px;
+    text-align: center;
+    
+}
+.section-aboutus--left p{
+    font-size: 14px;
+    line-height: 25px;
+    
+}
+
+.section-aboutus--right img{
+    width: 480px;
+    box-shadow:  0px 5px 10px #333;
+}
+
+.section-services{
+display: flex;
+}
+
+
+
+.section-service{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+
+.section-service:first-child{
+    border-left:  1px solid #333;
+}
+
+.section-service h4{
+    margin-top:  20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+
+.section-service p{
+    margin-top:  10px;
+    font-size: 13px;
+    color: #999;
+}
+
+
+/* ==============projetos=================== */
+.section-projects{
+    display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.section-projects-filters{
+    border:  1px solid #ccc;
+    background-color: #eee;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px  20px;
+}
+
+.section-projects-filters ul,
+.section-projects-filters li{
+list-style: none;
+}
+
+.section-projects-filters li{
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #ccc;
+    color: #555;
+    border-bottom: 3px solid #eee;
+    cursor: pointer;
+}
+
+.section-projects-filters li:hover{
+    border-bottom: 3px solid #b28756;
+}
+
+.section-projects-filters li:first-child{
+border-left: 0;
+}
+
+.section-projects-photos{
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.section-projects-photo{
+    width: 280px;
+
+}
+
+.section-projects-photoarea{
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+
+.section-projects-photoarea img{
+    width: inherit;
+    height: inherit;
+}
+
+.section-projects-photoinfo{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+
+}
+
+.section-projects-photoinfo h5{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-projects-photoarea:hover
+.section-projects-photoinfo{
+    display: flex;
+
+}
+
+
+
+.bg-team{
+    background-image:url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+
+}
+.section-team-area{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-team{
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+
+}
+
+
+.section-team .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.section-team .slide {
+    width: 280px;
+    height: 100%;
+    min-height: 300px;
+    display: inline-block;
+    background-color: white;
+    margin-right: 20px;
+
+}
+
+.section-team .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    color: rgb(8, 0, 0);
+    justify-content: center;
+    padding: 30px;
+}
+
+
+.section-team-area .sliders-pointers {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-team-area .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.section-team-area .pointer.active {
+    background-color: #b28756;
+}
+
+.section-team-avatar{
+    width: 150px;
+    height: auto;
+
+}
+
+.section-team-name{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+
+
+}
+
+.section-team-role{
+    color: #555;
+    font-size: 14px;
+    margin-top: 10px;
+    
+}
+
+.section-team-social {
+    display: flex;
+    margin-top: 20px;
+    
+}
+
+
+.section-team-social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    background-color: rgb(161, 156, 156);
+    border-radius: 13px;
+    margin-right: 10px;
+
+}
+
+
+.section-team-social a:hover{
+    background-color: #b28756;
+
+}
+
+
+.section-map{
+    background-image: url('../images/mapa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section-map-area{
+    width: 100vw;
+    max-width: 1140px;
+    margin: auto;
+
+
+}
+
+.section-map-info{
+    width: 50%;
+    padding: 30px;
+    background-color: white;
+    color: black;
+}
+
+    .section-map-info-item{
+        display: flex;
+        align-items: center;
+        color: rgb(128, 125, 125);
+        margin-bottom: 10px;
+
+    }
+
+.section-map-info-item-img{
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #999;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+.section-map-info-item-img img{
+    width: 15px;
+    height: auto;
+}
+
+
+
+
+
+
+/* ==============RESPONSIVIDADE======== */
+
